@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// Tip: Curious about the SQL queries Prisma ORM generates? Optimize helps you enhance your visibility:
+// https://pris.ly/tip-2-optimize
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// I'm a db guy, I prefer the singular form for physical table names; also its the Prisma model naming standard
+// Ref: https://www.prisma.io/docs/orm/reference/prisma-schema-reference#naming-conventions
+model Product {
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(200) // Limit title length to 200 characters
+  description String   @db.VarChar(1000) // Limit description to 1000 characters
+  image       String   @db.VarChar(200) // Limit image URL length to 200 characters
+  category    String   @db.VarChar(100) // Limit category name to 100 characters
+  price       Decimal  @db.Decimal(10, 2) // Use Decimal for currency precision
+  created_at  DateTime @default(now()) @db.Timestamptz // Store timestamps in UTC, handle translation to the correct timezone at the client (like Dynamics 365)
+}
