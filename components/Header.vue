@@ -6,8 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import PublicNav from "./PublicNav.vue";
-
 const user = useSupabaseUser();
 </script>
 
