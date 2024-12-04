@@ -122,6 +122,7 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+   const user = useSupabaseUser()</script>
 
 <style></style>
