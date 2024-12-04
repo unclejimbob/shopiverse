@@ -1,5 +1,5 @@
 export const useCart = () => {
-  return useState("cart", () => {
-    return [];
-  });
-};
+  return useState('cart', () => {
+    return []
+  })
+}
