@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-white dark: bg-gray-800">
+  <div class="flex flex-col min-h-screen bg-white dark:bg-gray-800">
     <button
       id="theme-toggle"
       type="button"
@@ -37,7 +37,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 if (import.meta.client) {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
   if (
