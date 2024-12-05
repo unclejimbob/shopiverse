@@ -2,14 +2,12 @@
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
-  // your custom flat configs go here, for example:
-  // {
-  //   files: ['**/*.ts', '**/*.tsx'],
-  //   rules: {
-  //     'no-console': 'off' // allow console.log in TypeScript files
-  //   }
-  // },
-  // {
-  //   ...
-  // }
+  {
+    files: ['**/*.{ts,tsx,vue}'], // Apply these rules to TypeScript and Vue files
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'off', // Disable the no-unused-vars rule
+      'vue/multi-word-component-names': 'off',
+      'vue/max-attributes-per-line': 'off',
+    },
+  },
 )

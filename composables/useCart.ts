@@ -1,5 +1,5 @@
+import type { Product } from '@prisma/client'
+
 export const useCart = () => {
-  return useState('cart', () => {
-    return []
-  })
+  return useState<Product[]>('cart', () => [])
 }

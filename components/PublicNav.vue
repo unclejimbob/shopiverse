@@ -123,6 +123,7 @@
 </template>
 
 <script lang="ts" setup>
-   const user = useSupabaseUser()</script>
+const user = useSupabaseUser()
+</script>
 
 <style></style>

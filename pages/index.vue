@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-4 gap-4">
-    <div v-if="products" v-for="product in products">
+  <div v-if="products" class="grid grid-cols-4 gap-4">
+    <div v-for="product in products" :key="product.id">
       <Product :product="product" />
     </div>
   </div>

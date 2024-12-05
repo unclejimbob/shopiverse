@@ -50,28 +50,30 @@
 </template>
 
 <script lang="ts" setup>
-import { Product } from '#build/components'
+import type { Product } from '@prisma/client'
 
-defineProps(['product'])
+const props = defineProps<{
+  product: Product
+}>()
 
 const user = useSupabaseUser()
 const cart = useCart()
 
-const addToCart = (product) => {
+const alreadyInCart = (cartState: Product[], productToCheck: Product): boolean => {
+  return cartState.some((productInCart) => {
+    return productInCart.id === productToCheck.id
+  })
+}
+
+const getRandomRating = () => Math.floor(Math.random() * 5) + 1
+
+const addToCart = (product: Product) => {
   if (user.value) {
     cart.value.push(product)
   }
   else {
     alert('Login to start adding products to cart')
   }
-}
-
-const getRandomRating = () => Math.floor(Math.random() * 5) + 1
-
-const alreadyInCart = (cartState, productToCheck) => {
-  return cartState.some((productInCart) => {
-    return productInCart.id === productToCheck.id
-  })
 }
 </script>
 
