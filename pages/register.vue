@@ -71,7 +71,7 @@
           id="filled_error_help"
           class="mt-2 text-xs text-red-600 dark:text-red-400"
         >
-          <span class="font-medium">Oh, snapp! </span>{{ errorMsg }}
+          <span class="font-medium">An unexpected error has occurred </span>{{ errorMsg }}
         </p>
       </div>
     </form>
