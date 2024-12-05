@@ -115,6 +115,7 @@ const signUp = async () => {
   successMsg.value = 'Redirecting...'
   setTimeout(async () => {
     successMsg.value = null
+    errorMsg.value = null
     await navigateTo('/confirm')
   }, 2000)
 }

@@ -136,6 +136,10 @@
 
 <script lang="ts" setup>
 const user = useSupabaseUser()
+onMounted(async () => {
+  const { initFlowbite } = await import('flowbite')
+  initFlowbite()
+})
 </script>
 
 <style></style>
