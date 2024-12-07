@@ -52,9 +52,7 @@
 <script lang="ts" setup>
 import type { Product } from '@prisma/client'
 
-const props = defineProps<{
-  product: Product
-}>()
+const props = defineProps<{ product: Product }>()
 
 const user = useSupabaseUser()
 const cart = useCart()

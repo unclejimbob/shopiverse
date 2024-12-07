@@ -1,81 +1,76 @@
 <template>
   <div class="page-body">
-    <header class="about-header">
-      <h1>About Us</h1>
+    <header>
+      <h1>Welcome to Shopiverse</h1>
     </header>
-    <main class="about-main">
-      <h2>Welcome to Shopiverse</h2>
-      <p>
-        At <strong>Shopiverse</strong>, we are your one-stop online destination for all things household.
-        From stylish clothing to cutting-edge consumer electronics, we’re here to bring you the best products
-        at unbeatable prices—all in one place.
-      </p>
 
-      <h2>Who We Are</h2>
-      <p>
-        Founded with a passion for quality and customer satisfaction, Shopiverse is committed to transforming your
-        shopping experience. We believe shopping should be easy, convenient, and enjoyable. That’s why we offer a
-        diverse range of products to meet all your daily needs.
-      </p>
+    <section class="about-section">
+      <h2>About Us</h2>
+      <p>Welcome to Shopiverse, your ultimate destination for all your shopping needs. At Shopiverse, we strive to provide you with a seamless and enjoyable shopping experience, offering a wide range of products from various categories.</p>
+      <p>Our mission is to connect customers with the products they love, offering high-quality items at competitive prices. Whether you're searching for the latest fashion trends, tech gadgets, home decor, or beauty essentials, you'll find it all here at Shopiverse.</p>
+      <p>With a user-friendly interface and secure payment options, shopping with us is convenient and safe. Our dedicated customer support team is always ready to assist you with any inquiries or concerns you may have.</p>
+      <p>Thank you for choosing Shopiverse. Happy shopping!</p>
+    </section>
 
-      <h2>What We Offer</h2>
-      <ul>
-        <li><strong>Clothing:</strong> From casual wear to formal attire, we bring you the latest styles for every occasion.</li>
-        <li><strong>Consumer Electronics:</strong> Upgrade your life with gadgets like smartphones, tablets, and home appliances.</li>
-        <li><strong>Household Essentials:</strong> Discover must-have items for a well-organized and functional home.</li>
-      </ul>
-
-      <p>
-        Whether you're shopping for yourself, your family, or your home, Shopiverse has everything you need to make life easier.
-      </p>
-    </main>
-    <footer class="about-footer">
+    <footer>
       <p>&copy; 2024 Shopiverse. All rights reserved.</p>
     </footer>
   </div>
 </template>
 
-  <style>
-    /* Scoped styles for the About Us page */
-    .about-header {
-      background: #4CAF50;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    .about-main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .about-main h1, .about-main h2 {
-      color: #4CAF50;
-    }
-    .about-main p {
-      margin: 1rem 0;
-    }
-    .about-main ul {
-      list-style: none;
-      padding: 0;
-    }
-    .about-main ul li {
-      margin: 0.5rem 0;
-      padding-left: 1.5rem;
-      text-indent: -1.5rem;
-    }
-    .about-main ul li::before {
-      content: "✔️";
-      margin-right: 0.5rem;
-      color: #4CAF50;
-    }
-    .about-footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #333;
-      color: #fff;
-      margin-top: 2rem;
-    }
-  </style>
+<style scoped>
+.page-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
