@@ -94,37 +94,48 @@
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
         >
           <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="flex flex-col font-medium p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
             <li>
               <NuxtLink
                 to="/search"
                 class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                 aria-current="page"
-              >Search</NuxtLink>
+              ><Icon
+                name="uil-search-plus"
+                size="30"
+                style="color: green"
+              />Search</NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/sell"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >Sell on Shopiverse</NuxtLink>
+              ><Icon
+                name="uil:dollar-alt"
+                size="30"
+                style="color: green"
+              />Sell on Shopiverse</NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/about"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >About</NuxtLink>
+              ><Icon
+                name="uil-question"
+                size="30"
+                style="color: green"
+              />About</NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/cart"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                <Icon
-                  name="uil:shopping-cart"
-                  size="30"
-                  style="color: green"
-                />
+              ><Icon
+                name="uil:shopping-cart"
+                size="30"
+                style="color: green"
+              />
                 Cart</NuxtLink>
             </li>
           </ul>
