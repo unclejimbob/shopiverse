@@ -1,0 +1,5 @@
+-- Test the retrieval of products
+curl http://localhost:3000/api/products
+
+-- Test a search
+curl http://localhost:3000/api/products/search/query?input=womens

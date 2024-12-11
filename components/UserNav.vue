@@ -152,5 +152,3 @@ onMounted(async () => {
   initFlowbite()
 })
 </script>
-
-<style></style>
