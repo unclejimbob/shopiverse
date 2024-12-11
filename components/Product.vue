@@ -34,8 +34,8 @@
         <div class="flex items-center justify-between">
           <span
             class="text-3xl font-bold text-gray-900 dark:text-white line-through"
-          >${{ Number(product.price) * 2 }}</span>
-          <span class="text-3xl font-bold text-gray-900 dark:text-white">${{ product.price }}</span>
+          >${{ (Number(product.price) * 2).toFixed(2) }}</span>
+          <span class="text-3xl font-bold text-gray-900 dark:text-white">${{ Number(product.price).toFixed(2) }}</span>
           <button
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             @click="addToCart(product)"
@@ -55,24 +55,13 @@ import type { Product } from '@prisma/client'
 const props = defineProps<{ product: Product }>()
 
 const user = useSupabaseUser()
-const cart = useCart()
-
+const { cart, addToCart } = useCart()
 const alreadyInCart = (cartState: Product[], productToCheck: Product): boolean => {
   return cartState.some((productInCart) => {
     return productInCart.id === productToCheck.id
   })
 }
-
 const getRandomRating = () => Math.floor(Math.random() * 5) + 1
-
-const addToCart = (product: Product) => {
-  if (user.value) {
-    cart.value.push(product)
-  }
-  else {
-    alert('Login to start adding products to cart')
-  }
-}
 </script>
 
 <style></style>
