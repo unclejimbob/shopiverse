@@ -37,7 +37,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 if (import.meta.client) {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
   if (

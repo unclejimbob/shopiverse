@@ -78,7 +78,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 const supabase = useSupabaseClient()
 const user = useSupabaseUser()
 const email = useState(() => null)

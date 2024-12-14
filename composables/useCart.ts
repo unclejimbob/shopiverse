@@ -19,8 +19,8 @@ export const useCart = () => {
     cart.value.forEach((product) => {
       total += Number(product.price)
     })
-
-    return total.toFixed(2)
+    return total
+    // return total.toFixed(2)
   }
 
   const alreadyInCart = (cartState: Product[], productToCheck: Product): boolean => {

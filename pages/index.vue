@@ -9,6 +9,6 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 const { data: products } = await useFetch('/api/products')
 </script>

@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 const searchInput = useState(() => null)
 const searchResults = useState(() => null)
 const { data } = await useFetch('/api/products/search/query', {

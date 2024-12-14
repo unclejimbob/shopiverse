@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 const route = useRoute()
 const id = route.params.id
 const { data: product, status } = await useFetch(() => {
