@@ -23,10 +23,20 @@ export const useCart = () => {
     return total.toFixed(2)
   }
 
+  const alreadyInCart = (cartState: Product[], productToCheck: Product): boolean => {
+    return cartState.some((productInCart) => {
+      return productInCart.id === productToCheck.id
+    })
+  }
+
+  const getProductRandomRating = () => Math.floor(Math.random() * 5) + 1
+
   return {
     cart,
     addToCart,
     removeFromCart,
     calcTotalCart,
+    alreadyInCart,
+    getProductRandomRating,
   }
 }

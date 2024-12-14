@@ -29,7 +29,7 @@
           </h5>
           <span
             class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3"
-          >{{ getRandomRating() }}</span>
+          >{{ getProductRandomRating() }}</span>
         </div>
         <div class="flex items-center justify-between">
           <span
@@ -38,9 +38,9 @@
           <span class="text-3xl font-bold text-gray-900 dark:text-white">${{ Number(product.price).toFixed(2) }}</span>
           <button
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            @click="addToCart(product)"
+            @click="alreadyInCart(cart, product) ? removeFromCart(product) : addToCart(product)"
           >
-            <span v-if="alreadyInCart(cart, product) && user">Item added</span>
+            <span v-if="alreadyInCart(cart, product) && user">Remove from cart</span>
             <span v-else>Add to cart</span>
           </button>
         </div>
@@ -53,15 +53,8 @@
 import type { Product } from '@prisma/client'
 
 const props = defineProps<{ product: Product }>()
-
 const user = useSupabaseUser()
-const { cart, addToCart } = useCart()
-const alreadyInCart = (cartState: Product[], productToCheck: Product): boolean => {
-  return cartState.some((productInCart) => {
-    return productInCart.id === productToCheck.id
-  })
-}
-const getRandomRating = () => Math.floor(Math.random() * 5) + 1
+const { cart, addToCart, removeFromCart, alreadyInCart, getProductRandomRating } = useCart()
 </script>
 
 <style></style>
